@@ -3,14 +3,18 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  height: 70px;
+  height: 57px;
   color: white;
+}
+span {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .logo__container {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 250px;
+  max-width: 200px;
 }
 .logo__container img {
   width: 80%;
@@ -72,6 +76,7 @@
   align-items: center;
   justify-content: center;
   max-width: 450px;
+  gap: 10px;
 }
 
 .order__container a {
@@ -94,4 +99,56 @@
   background-color: #1a1a1a;
   border: none;
   color: white;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart span {
+  position: absolute;
+  font-weight: bold;
+  top: -7px;
+  font-size: 20px;
+  background-color: #1a1a1a;
+  left: 14px;
+  color: orange;
+}
+
+.order__container a:hover,
+.delivery:hover,
+.logo__container a:hover {
+  border: 1px solid white;
+  border-radius: 3px;
+}
+.lower__container {
+  background-color: #232f3e;
+  color: white;
+}
+.lower__container ul {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+}
+.lower__container ul li {
+  padding: 8px;
+}
+.lower__container ul li:first-child {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  .header__container {
+    display: flex;
+    flex-direction: column !important;
+    height: auto;
+  }
+  .lower__container ul li:not(:first-child) {
+    display: none;
+  }
+  .language {
+    display: none;
+  }
 }

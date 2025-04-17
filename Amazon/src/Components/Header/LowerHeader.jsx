@@ -4,16 +4,16 @@ import classes from "./header.module.css";
 const LowerHeader = () => {
   return (
     <div className={classes.lower__container}>
-      <ul>
-        <li>
+      <ul className={classes.navList}>
+        <li className={classes.navItem}>
           <AiOutlineMenu />
-          <p>All</p>
+          <span>All</span>
         </li>
-        <li>Today's Deals</li>
-        <li>Customer Service</li>
-        <li>Registry</li>
-        <li>Gift Cards</li>
-        <li>Sell</li>
+        <li className={classes.navItem}>Today's Deals</li>
+        <li className={classes.navItem}>Customer Service</li>
+        <li className={classes.navItem}>Registry</li>
+        <li className={classes.navItem}>Gift Cards</li>
+        <li className={classes.navItem}>Sell</li>
       </ul>
     </div>
   );

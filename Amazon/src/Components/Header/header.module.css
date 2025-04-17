@@ -1,3 +1,16 @@
+.resetWrapper {
+  all: initial;
+  * {
+    all: unset;
+  }
+}
+.resetWrapper,
+.resetWrapper * {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+
 .header__container {
   background-color: #1a1a1a;
   display: flex;
@@ -6,7 +19,7 @@
   height: 57px;
   color: white;
 }
-span {
+.headerText {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -124,19 +137,28 @@ span {
 .lower__container {
   background-color: #232f3e;
   color: white;
+  padding: px 20px;
 }
-.lower__container ul {
+
+.navList {
   display: flex;
   list-style: none;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  padding: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
   gap: 5px;
 }
-.lower__container ul li {
-  padding: 8px;
-}
-.lower__container ul li:first-child {
-  display: flex;
-  gap: 2px;
-  align-items: center;
+
+.firstItem {
+  font-weight: bold;
 }
 
 @media screen and (max-width: 576px) {

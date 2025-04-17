@@ -8,7 +8,7 @@ import LowerHeader from "./LowerHeader";
 const Header = () => {
   return (
     <>
-      <section>
+      <section className={classes.resetWrapper}>
         <div className={classes.header__container}>
           <div className={classes.logo__container}>
             {/* logo */}
@@ -20,12 +20,12 @@ const Header = () => {
             </a>
           </div>
           <div className={classes.delivery}>
-            <span>
+            <span className={classes.headerText}>
               <SlLocationPin />
             </span>
             <div>
               <p>Delivered to</p>
-              <span>Ethiopia</span>
+              <span className={classes.headerText}>Ethiopia</span>
             </div>
           </div>
           <div className={classes.search}>
@@ -33,8 +33,8 @@ const Header = () => {
               <option value="">All</option>
             </select>
             <input type="text" placeholder="Search Products" />
-            <span>
-              <BsSearch />
+            <span className={classes.headerText}>
+              <BsSearch size={36} />
             </span>
           </div>
           <div className={classes.order__container}>
@@ -52,16 +52,16 @@ const Header = () => {
             <a href="">
               <div>
                 <p>Sign in</p>
-                <span>Account & Lists</span>
+                <span className={classes.headerText}>Account & Lists</span>
               </div>
             </a>
             <a href="">
               <p>returns</p>
-              <span>& Orders</span>
+              <span className={classes.headerText}>& Orders</span>
             </a>
             <a href="" className={classes.cart}>
               <BiCart size={35} />
-              <span>0</span>
+              <span className={classes.headerText}>0</span>
             </a>
           </div>
         </div>

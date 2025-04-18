@@ -6,7 +6,7 @@ function CarouselEffect() {
   return (
     <div className={classes.fullPage}>
       <div className={classes.hero__img}>
-        <Carousel>
+        <Carousel indicators={false}>
           <Carousel.Item interval={3000}>
             <img
               src="https://m.media-amazon.com/images/I/61AnASun+qL._SX3000_.jpg"

@@ -33,7 +33,10 @@ const Header = () => {
               <option value="">All</option>
             </select>
             <input type="text" placeholder="Search Products" />
-            <span className={classes.headerText}>
+            <span
+              className={classes.headerText}
+              style={{ overflowY: "hidden" }}
+            >
               <BsSearch size={36} />
             </span>
           </div>

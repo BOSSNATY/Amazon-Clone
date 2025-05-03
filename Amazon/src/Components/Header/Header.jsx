@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "../Header/header.module.css";
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
@@ -12,12 +13,12 @@ const Header = () => {
         <div className={classes.header__container}>
           <div className={classes.logo__container}>
             {/* logo */}
-            <a href="/">
+            <Link to="/">
               <img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="amazon logo"
               />
-            </a>
+            </Link>
           </div>
           <div className={classes.delivery}>
             <span className={classes.headerText}>
@@ -52,20 +53,20 @@ const Header = () => {
                 </select>
               </a>
             </div>
-            <a href="">
+            <Link to="/auth">
               <div>
                 <p>Sign in</p>
                 <span className={classes.headerText}>Account & Lists</span>
               </div>
-            </a>
-            <a href="">
+            </Link>
+            <Link to="/orders">
               <p>returns</p>
               <span className={classes.headerText}>& Orders</span>
-            </a>
-            <a href="" className={classes.cart}>
+            </Link>
+            <Link to="/cart" className={classes.cart}>
               <BiCart size={35} />
               <span className={classes.headerText}>0</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -31,7 +31,14 @@ function ProductDetail() {
       {isLoading ? (
         <Loader />
       ) : (
-        <ProductCard product={product} flex={true} renderDesc={true} />
+        <section style={{ marginTop: "120px" }}>
+          <ProductCard
+            product={product}
+            flex={true}
+            renderDesc={true}
+            renderAdd={true}
+          />
+        </section>
       )}
     </Layout>
   );

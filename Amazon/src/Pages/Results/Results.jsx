@@ -35,7 +35,13 @@ function Results() {
           <hr />
           <div className={classes.products_container}>
             {results?.map((product) => {
-              return <ProductCard key={product.id} product={product} />;
+              return (
+                <ProductCard
+                  renderAdd={true}
+                  key={product.id}
+                  product={product}
+                />
+              );
             })}
           </div>
         </section>

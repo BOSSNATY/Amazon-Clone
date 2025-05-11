@@ -4,6 +4,7 @@
   overflow-x: hidden;
   font-family: sans-serif;
   /* overflow-y: hidden; */
+  box-sizing: border-box;
 }
 body {
   background-color: #f2f2f2;

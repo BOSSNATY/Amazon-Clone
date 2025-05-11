@@ -6,9 +6,10 @@ import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import LowerHeader from "./LowerHeader";
 import { DataContext } from "../DataProvider/DataProvider";
+import { auth } from "../../Utility/firebase";
 
 const Header = () => {
-  const [{ basket }, dispatch] = useContext(DataContext);
+  const [{ user, basket }, dispatch] = useContext(DataContext);
   // console.log(basket.length);
   const totalItem = basket?.reduce((amount, item) => {
     return item.amount + amount;
@@ -60,10 +61,19 @@ const Header = () => {
                 </select>
               </a>
             </div>
-            <Link to="/auth">
+            <Link to={!user && "/auth"}>
               <div>
-                <p>Sign in</p>
-                <span className={classes.headerText}>Account & Lists</span>
+                {user ? (
+                  <>
+                    <p>Hello {user?.email?.split("@")[0]}</p>
+                    <span onClick={() => auth.signOut()}>SignOut</span>
+                  </>
+                ) : (
+                  <>
+                    <p>Hello ,Sign in</p>
+                    <span className={classes.headerText}>Account & Lists</span>
+                  </>
+                )}
               </div>
             </Link>
             <Link to="/orders">

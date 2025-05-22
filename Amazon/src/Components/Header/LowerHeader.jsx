@@ -3,7 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import classes from "./header.module.css";
 const LowerHeader = () => {
   return (
-    <div className={classes.lower__container}>
+    <div style={{ width: "100%" }} className={classes.lower__container}>
       <ul className={classes.navList}>
         <li className={classes.navItem}>
           <AiOutlineMenu />

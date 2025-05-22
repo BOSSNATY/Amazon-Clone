@@ -11,7 +11,7 @@
 .hero__img {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 715px;
   z-index: 0;
 }
 
@@ -37,3 +37,9 @@
     rgba(255, 255, 255, 1)
   );
 }
+/* 
+@media screen and (max-width: 576px) {
+  .hero__img {
+    height: 569px;
+  }
+} */
